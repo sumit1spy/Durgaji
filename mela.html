@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jhula &amp; Mela | Durga Utsav Carnival</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mela.css">
+</head>
+<body class="mela-body">
+     <!-- FLOATING MUSIC BUTTON (Persists across pages) -->
+    <button class="floating-music-btn" id="musicToggle" aria-label="Toggle festive music" title="Play / Pause Festive Song">
+        <span class="music-icon">♪</span>
+    </button>
+    <!-- Background Audio element: Place your mp3 at audio/song.mp3 -->
+    <audio id="bgAudio" src="WhatsApp Audio 2026-10-17 at 12.46.02 PM.mpeg" loop preload="auto" ></audio>
+
+    <!-- NAVBAR -->
+    <header class="navbar mela-navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-flower">✿</span>
+            <span class="logo-text">
+                <span class="logo-name">Durga <b>Utsav</b></span>
+                <small>PANDAL · MELA · CELEBRATION</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="nalanda.html" class="drop-link">Bihar </a>
+        <!-- <div class="dropdown-menu">
+            <a href="nalanda.html">Nalanda</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <div class="dropdown">
+        <a href="koderma.html" class="drop-link">Jharkhand </a>
+        <!-- <div class="dropdown-menu">
+            <a href="koderma.html">Koderma</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <a href="mela.html" class="active">Jhula &amp; Mela</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+    </header>
+
+    <main>
+        <!-- NIGHT CARNIVAL HERO -->
+        <section class="carnival-hero">
+            <div class="fairy-lights">
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span><span></span>
+            </div>
+
+            <span class="carnival-eyebrow">FESTIVAL FAIR &amp; AMUSEMENT</span>
+            <h1>Thrills, Melas &amp;<br><span class="neon-gold">Joyful Rides</span></h1>
+            <p>Experience the dazzling lights, giant wheels, mouth-watering food and festive fairground energy across Nalanda &amp; Koderma.</p>
+
+            <div class="hero-action-buttons">
+                <a href="#rides" class="btn-carnival-primary">Explore Rides <span>↓</span></a>
+                <a href="#grounds" class="btn-carnival-outline">Mela Grounds <span>→</span></a>
+            </div>
+
+            <!-- Floating fair ornaments -->
+            <span class="fair-ornament ornament-1">🎡</span>
+            <span class="fair-ornament ornament-2">✨</span>
+            <span class="fair-ornament ornament-3">🎠</span>
+        </section>
+
+        <!-- RIDES & ATTRACTIONS SECTION -->
+        <section class="rides-section" id="rides">
+            <div class="carnival-heading">
+                <span class="carnival-tag">CARNIVAL ATTRACTIONS</span>
+                <h2>Popular <span>Jhulas &amp; Rides</span></h2>
+                <p>From towering giant wheels to high-speed thrills and kids joyrides.</p>
+
+                <!-- Filter Pills -->
+                <div class="ride-filters" id="rideFilters">
+                    <button class="filter-pill active" data-filter="all">All Rides</button>
+                    <button class="filter-pill" data-filter="high">High Thrill</button>
+                    <button class="filter-pill" data-filter="family">Family Fun</button>
+                    <button class="filter-pill" data-filter="kids">Kids Zone</button>
+                </div>
+            </div>
+
+            <div class="rides-grid" id="ridesGrid">
+
+                <!-- Ride 1: Giant Wheel -->
+                <article class="ride-card" data-category="high family">
+                    <div class="ride-photo">
+                        <img src="images/giant-wheel.jpg" alt="Illuminated Giant Ferris Wheel at Durga Puja Mela">
+                        <span class="thrill-badge high">High Thrill</span>
+                        <span class="price-tag">₹65 / ride</span>
+                    </div>
+                    <div class="ride-info">
+                        <span class="ride-category-text">ICONIC FAIR ATTRACTION</span>
+                        <h3>Giant Wheel (बड़ा चक्र झूला)</h3>
+                        <p>Enjoy a panoramic 360-degree night view of the entire illuminated mela ground from the top.</p>
+                        <div class="ride-meta">
+                            <span>⏱️ 5-7 Mins</span>
+                            <span>👨‍👩‍👧‍👦 All Ages</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ride 2: Break Dance -->
+                <article class="ride-card" data-category="high">
+                    <div class="ride-photo">
+                        <img src="images/break-dance.jpg" alt="Break Dance spinning amusement ride with colorful lights">
+                        <span class="thrill-badge extreme">Extreme Thrill</span>
+                        <span class="price-tag">₹60 / ride</span>
+                    </div>
+                    <div class="ride-info">
+                        <span class="ride-category-text">HIGH-SPEED ROTATION</span>
+                        <h3>Break Dance / Tsunami</h3>
+                        <p>Lightning-fast spins and energetic beats that make it the youth favorite ride every puja evening.</p>
+                        <div class="ride-meta">
+                            <span>⏱️ 4-5 Mins</span>
+                            <span>⚡ 12+ Years</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ride 3: Columbus Boat -->
+                <article class="ride-card" data-category="high">
+                    <div class="ride-photo">
+                        <img src="images/columbus.jpg" alt="Columbus Pirate Ship swinging boat ride">
+                        <span class="thrill-badge high">High Thrill</span>
+                        <span class="price-tag">₹60 / ride</span>
+                    </div>
+                    <div class="ride-info">
+                        <span class="ride-category-text">GRAVITY-DEFYING SWING</span>
+                        <h3>Columbus Boat (नाव झूला)</h3>
+                        <p>Giant pendulum motion swinging high into the night sky for an unforgettable adrenaline rush.</p>
+                        <div class="ride-meta">
+                            <span>⏱️ 4-5 Mins</span>
+                            <span>🌊 High Wave</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Ride 4: Dragon Train -->
+<article class="ride-card" data-category="family kids">
+    <div class="ride-photo">
+        <img src="images/dragon-train.jpg" alt="Dragon Roller Coaster fairground ride with lights">
+        <span class="thrill-badge family">Family Fun</span>
+        <span class="price-tag">₹60 / ride</span>
+    </div>
+    <div class="ride-info">
+        <span class="ride-category-text">ROLLER COASTER RIDE</span>
+        <h3>Dragon Roller Coaster</h3>
+        <p>A fun curving coaster ride with twists, gentle dips, and colorful dragon engine lights.</p>
+        <div class="ride-meta">
+            <span>⏱️ 4 Mins</span>
+            <span>👨‍👩‍👧 Family Friendly</span>
+        </div>
+    </div>
+</article>
+
+<!-- Ride 5: Mickey Mouse Bouncing -->
+<article class="ride-card" data-category="kids">
+    <div class="ride-photo">
+        <img src="images/mickey-mouse.jpg" alt="Kids Jumping Mickey Mouse inflatable bouncing castle">
+        <span class="thrill-badge kids">Kids Zone</span>
+        <span class="price-tag">₹30 / 15 mins</span>
+    </div>
+    <div class="ride-info">
+        <span class="ride-category-text">BOUNCING CASTLE</span>
+        <h3>Jumping Mickey Mouse</h3>
+        <p>Safe, bouncy inflatable castle filled with slides, soft obstacles, and endless giggles for toddlers.</p>
+        <div class="ride-meta">
+            <span>⏱️ 15 Mins</span>
+            <span>👶 2 - 10 Years</span>
+        </div>
+    </div>
+</article>
+
+<!-- Ride 6: Toy Train & Baby Cars -->
+<article class="ride-card" data-category="kids">
+    <div class="ride-photo">
+        <img src="images/toy-train.jpg" alt="Kids miniature toy train and baby cars amusement ride">
+        <span class="thrill-badge kids">Kids Zone</span>
+        <span class="price-tag">₹30 / ride</span>
+    </div>
+    <div class="ride-info">
+        <span class="ride-category-text">MINI AMUSEMENT</span>
+        <h3>Toy Train &amp; Baby Cars</h3>
+        <p>Delightful miniature cars and musical toy trains designed exclusively for tiny adventurers.</p>
+        <div class="ride-meta">
+            <span>⏱️ 5 Mins</span>
+            <span>🚗 Safe Speed</span>
+        </div>
+    </div>
+</article>
+
+            </div>
+        </section>
+
+        <!-- FAMOUS MELA GROUNDS -->
+        <section class="grounds-section" id="grounds">
+            <div class="carnival-heading">
+                <span class="carnival-tag">WHERE TO GO</span>
+                <h2>Major <span>Mela Grounds</span></h2>
+                <p>The biggest fairgrounds with maximum rides, food courts, and festive crowds.</p>
+            </div>
+
+            <div class="grounds-grid">
+                <!-- Nalanda Grounds -->
+                <article class="ground-card">
+                    <span class="ground-tag bihar-tag">BIHAR · NALANDA</span>
+                    <h3>Soghra College Ground Mela</h3>
+                    <p class="ground-area">Bihar Sharif, Nalanda</p>
+                    <p>The largest mela ground in Bihar Sharif featuring towering giant wheels, circus, and sprawling shopping avenues.</p>
+                    <div class="ground-footer">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Soghra+College+Ground+Bihar+Sharif+Nalanda" target="_blank" rel="noopener" class="map-pill">View on Google Maps ↗</a>
+                    </div>
+                </article>
+
+                <article class="ground-card">
+                    <span class="ground-tag bihar-tag">BIHAR · NALANDA</span>
+                    <h3>Town Hall &amp; Hospital More Fair</h3>
+                    <p class="ground-area">Hospital More, Bihar Sharif</p>
+                    <p>Centrally located fair surrounded by prestigious puja pandals, fast food stalls, and family rides.</p>
+                    <div class="ground-footer">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Town+Hall+Bihar+Sharif+Nalanda" target="_blank" rel="noopener" class="map-pill">View on Google Maps ↗</a>
+                    </div>
+                </article>
+
+                <!-- Koderma Grounds -->
+                <article class="ground-card">
+                    <span class="ground-tag jharkhand-tag">JHARKHAND · KODERMA</span>
+                    <h3>C.H. High School Ground Mela</h3>
+                    <p class="ground-area">Jhumri Telaiya, Koderma</p>
+                    <p>The grandest mela of Jhumri Telaiya with high-speed breakdance, columbus rides, and enormous evening footfall.</p>
+                    <div class="ground-footer">
+                        <a href="https://www.google.com/maps/search/?api=1&query=CH+High+School+Jhumri+Telaiya+Koderma" target="_blank" rel="noopener" class="map-pill">View on Google Maps ↗</a>
+                    </div>
+                </article>
+
+                <article class="ground-card">
+                    <span class="ground-tag jharkhand-tag">JHARKHAND · KODERMA</span>
+                    <h3>Station Road Carnival Area</h3>
+                    <p class="ground-area">Near Railway Station, Jhumri Telaiya</p>
+                    <p>Dazzling street lighting, toy stalls, famous sweet shops, and lively cultural carnival stalls.</p>
+                    <div class="ground-footer">
+                        <a href="https://www.google.com/maps/search/?api=1&query=Station+Road+Jhumri+Telaiya+Koderma" target="_blank" rel="noopener" class="map-pill">View on Google Maps ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- STREET FOOD & BAZAR SECTION -->
+        <section class="food-section" id="food">
+            <div class="food-container">
+                <div class="food-image">
+                    <img src="images/mela-food.jpg" alt="Delicious hot jalebi and chaat street food stall at Durga Puja mela">
+                </div>
+                <div class="food-content">
+                    <span class="carnival-tag">TASTE OF THE MELA</span>
+                    <h2>Garma-Garam Jalebi &amp;<br><span>Chatpati Chaat</span></h2>
+                    <p>A Durga Puja mela visit is never complete without indulging in freshly fried crispy jalebis, steaming samosas, and tangy papdi chaat.</p>
+
+                    <div class="food-features">
+                        <div class="food-feat-item">
+                            <span class="food-icon">🍯</span>
+                            <div>
+                                <h4>Sweet Delights</h4>
+                                <small>Kesar Jalebi, Imarti, Rabri &amp; Kulfi-Falooda</small>
+                            </div>
+                        </div>
+
+                        <div class="food-feat-item">
+                            <span class="food-icon">🌶️</span>
+                            <div>
+                                <h4>Street Flavors</h4>
+                                <small>Pani Puri, Chana Masala, Aloo Tikki &amp; Chowmein</small>
+                            </div>
+                        </div>
+
+                        <div class="food-feat-item">
+                            <span class="food-icon">🛍️</span>
+                            <div>
+                                <h4>Meena Bazar</h4>
+                                <small>Glass Bangles, Handcrafted Toys, Festive Souvenirs</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMINGS & HELPFUL TIPS -->
+        <section class="tips-section">
+            <div class="tips-box">
+                <h3>🎪 Mela Visitor Guide &amp; Timings</h3>
+                <div class="tips-grid">
+                    <div class="tip-card">
+                        <span class="tip-icon">⏰</span>
+                        <h4>Timings</h4>
+                        <p>Opens daily from <strong>4:00 PM to 11:30 PM</strong>. Peak lighting &amp; excitement starts after 6:30 PM.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span class="tip-icon">📅</span>
+                        <h4>Best Days</h4>
+                        <p><strong>Maha Saptami to Vijaya Dashami</strong> are the liveliest with the fullest fairgrounds and rides.</p>
+                    </div>
+
+                    <div class="tip-card">
+                        <span class="tip-icon">👨‍👩‍👧‍👦</span>
+                        <h4>Family Safety</h4>
+                        <p>Keep children close in crowded areas. Note the nearby police booth and helpdesk upon entering.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <a href="index.html" class="footer-logo">✿ Durga Utsav</a>
+        <p>Pandal · Mela · Celebration</p>
+        <p>Celebrating the spirit of Durga Puja across Bihar &amp; Jharkhand.</p>
+        <small>© 2026 Durga Utsav. All rights reserved.</small>
+    </footer>
+      <!-- SCROLL TO TOP ARROW BUTTON -->
+    <button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑ </button>
+
+    <script src="mela.js"></script>
+    <script src="music.js"></script>
+    <!-- SCROLL TO TOP ARROW BUTTON -->
+    <!-- <button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑</button> -->
+</body>
+</html>

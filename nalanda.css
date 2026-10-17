@@ -1,0 +1,482 @@
+/* =========================
+   DURGA UTSAV - NALANDA PAGE
+========================= */
+
+/* Sticky Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Nalanda Hero Section */
+.nalanda-hero {
+    min-height: 370px;
+    padding: 75px 20px 65px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: #fffaf2;
+    background:
+        radial-gradient(ellipse at 50% 110%, #a7432b 0%, transparent 48%),
+        linear-gradient(120deg, #570b1a, #31040f);
+}
+
+.nalanda-eyebrow {
+    color: #f4c34f;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+.nalanda-hero h1 {
+    margin-top: 20px;
+    font: 700 clamp(40px, 6vw, 68px)/1.12
+          "Playfair Display", serif;
+}
+
+.nalanda-hero h1 span {
+    color: #f4c34f;
+    font-style: italic;
+}
+
+.nalanda-hero p {
+    margin: 18px auto 26px;
+    color: #f4e5df;
+    line-height: 1.8;
+}
+
+.nalanda-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    color: #45101a;
+    background: linear-gradient(120deg, #ffe08a, #efb52f);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.25s;
+}
+
+.nalanda-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Floating Stars (Celebrate Durga Puja ke bagal wale) */
+.hero-ornament {
+    position: absolute;
+    color: #f4c34f;
+    opacity: 0.65;
+    font-size: 36px;
+    z-index: 2;
+    pointer-events: none;
+    animation: float 4s ease-in-out infinite;
+}
+
+.ornament-left {
+    left: 10%;
+    top: 28%;
+    animation-delay: 0s;
+}
+
+.ornament-right {
+    right: 10%;
+    bottom: 20%;
+    animation-delay: 2s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-13px);
+    }
+}
+
+/* =========================
+   LOCATIONS BACKGROUND
+========================= */
+
+.locations-section {
+    padding: 75px 6% 90px;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse at top, #fff0d2, transparent 65%),
+        #fff9ef;
+}
+
+/* Moving golden particles */
+.locations-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+        radial-gradient(circle, #d9a441 2px, transparent 3px),
+        radial-gradient(circle, #e8bd60 1.5px, transparent 3px),
+        radial-gradient(circle, #c58a27 1px, transparent 2px);
+    background-size: 130px 150px, 190px 180px, 90px 110px;
+    background-position: 0 0, 45px 70px, 20px 35px;
+    animation: goldenFloat 18s linear infinite;
+    opacity: 0.42;
+}
+
+@keyframes goldenFloat {
+    from {
+        background-position: 0 0, 45px 70px, 20px 35px;
+    }
+
+    to {
+        background-position: 130px 300px, 235px 250px, 110px 220px;
+    }
+}
+
+/* Locations heading */
+.locations-heading {
+    max-width: 700px;
+    margin: 0 auto 38px;
+    text-align: center;
+    position: relative;
+}
+
+.locations-heading h2 {
+    margin-top: 12px;
+    color: #4c0a19;
+    font: 700 clamp(32px, 4vw, 46px)
+          "Playfair Display", serif;
+}
+
+.locations-heading h2 span {
+    color: #bb8123;
+    font-style: italic;
+}
+
+.locations-heading > p {
+    margin-top: 12px;
+    color: #725b53;
+    line-height: 1.7;
+}
+
+.section-label {
+    color: #a36c19;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+/* =========================
+   LOCATION PHOTO CARDS
+========================= */
+
+.location-grid {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    position: relative;
+}
+
+.location-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #ead9bb;
+    border-radius: 16px;
+    background: #fffdf8;
+    box-shadow: 0 8px 24px #4b07150b;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.location-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 30px #4b07151a;
+}
+
+/* Photo area */
+.location-photo {
+    height: 235px;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at center, #fff1c9, transparent 55%),
+        linear-gradient(135deg, #f4dfbd, #ead1aa);
+}
+
+.location-photo img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.location-card:hover .location-photo img {
+    transform: scale(1.07);
+}
+
+/* Photo placeholder */
+.photo-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    text-align: center;
+    color: #8e5d12;
+    font: 600 15px "DM Sans", sans-serif;
+}
+
+.location-photo.has-image .photo-placeholder {
+    display: none;
+}
+
+/* Photo number badge */
+.photo-number {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #f4c34f;
+    border-radius: 50%;
+    background: #4c0a19e8;
+    color: #ffe08a;
+    font: 700 13px "DM Sans", sans-serif;
+}
+
+/* =========================
+   AREA NAME AND MAP BUTTON
+========================= */
+
+.location-info {
+    padding: 22px 20px 24px;
+    text-align: left;
+    background: #fffdf8;
+}
+
+.location-tag {
+    display: inline-block;
+    margin-bottom: 10px;
+    color: #a36c19;
+    font-family: "DM Sans", sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.location-info h3 {
+    margin: 0 0 18px;
+    color: #4c0a19;
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+    overflow-wrap: anywhere;
+}
+
+/* Google Maps button */
+.map-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 11px 16px;
+    border: 1px solid #7b182a;
+    border-radius: 25px;
+    background: linear-gradient(120deg, #741329, #4c0a19);
+    color: #ffe4a0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.map-link:hover {
+    background: linear-gradient(120deg, #efbd45, #d99a20);
+    color: #4c0a19;
+    border-color: #d99a20;
+    transform: translateY(-2px);
+}
+
+.map-link span {
+    font-size: 16px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* =========================
+   BOTTOM NOTE AND FOOTER
+========================= */
+
+.nalanda-note {
+    padding: 35px 20px;
+    text-align: center;
+    color: #725b53;
+    background: #fff4df;
+}
+
+.nalanda-note > span {
+    display: block;
+    margin-bottom: 10px;
+    color: #bb8123;
+    font-size: 28px;
+}
+
+.nalanda-note p {
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+}
+
+/* =========================
+   TABLET RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 900px) {
+    .location-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .locations-section {
+        padding: 60px 5% 70px;
+    }
+
+    .location-photo {
+        height: 220px;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 600px) {
+    .nalanda-hero {
+        min-height: 330px;
+        padding: 65px 18px 55px;
+    }
+
+    .nalanda-eyebrow {
+        letter-spacing: 2px;
+    }
+
+    .hero-ornament {
+        font-size: 25px;
+    }
+
+    .locations-section {
+        padding: 45px 18px 60px;
+    }
+
+    .locations-heading {
+        margin-bottom: 30px;
+    }
+
+    .locations-heading > p {
+        font-size: 14px;
+    }
+
+    .location-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .location-photo {
+        height: 235px;
+    }
+
+    .location-info {
+        padding: 20px;
+    }
+
+    .location-info h3 {
+        font-size: 24px;
+    }
+
+    .map-link {
+        padding: 11px 15px;
+    }
+
+    .ornament-left {
+        left: 5%;
+    }
+
+    .ornament-right {
+        right: 5%;
+    }
+}
+
+/* Respect reduced-motion settings */
+@media (prefers-reduced-motion: reduce) {
+    .locations-section::before,
+    .location-card,
+    .location-photo img,
+    .map-link,
+    .nalanda-button,
+    .hero-ornament {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .location-card:hover,
+    .map-link:hover,
+    .nalanda-button:hover {
+        transform: none;
+    }
+    
+}
+/* =======================================
+   SCROLL TO TOP BUTTON (Universal)
+======================================= */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 998;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: linear-gradient(135deg, #741329, #450817);
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(244, 195, 79, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    background: linear-gradient(135deg, #ffe08a, var(--gold));
+    color: #450817;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(244, 195, 79, 0.6);
+}

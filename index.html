@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Utsav | Pandal • Mela • Celebration</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- FLOATING MUSIC BUTTON (Persists across pages) -->
+    <button class="floating-music-btn" id="musicToggle" aria-label="Toggle festive music" title="Play / Pause Festive Song">
+        <span class="music-icon">♪</span>
+    </button>
+    <!-- Background Audio element: Place your mp3 at audio/song.mp3 -->
+    <audio id="bgAudio" src="WhatsApp Audio 2026-10-17 at 12.46.02 PM.mpeg" loop preload="auto" ></audio>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-flower">✿</span>
+            <span class="logo-text">
+                <span class="logo-name">Durga <b>Utsav</b></span>
+                <small>PANDAL · MELA · CELEBRATION</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="index.html" class="active">Home</a>
+
+            <div class="dropdown">
+                <a href="nalanda.html" class="drop-link">Bihar </a>
+                <!-- <div class="dropdown-menu">
+                    <a href="nalanda.html">Nalanda</a>
+                    <a href="#destinations">Other Areas</a>
+                </div> -->
+            </div>
+
+            <div class="dropdown">
+                <a href="koderma.html" class="drop-link">Jharkhand </a>
+                <!-- <div class="dropdown-menu">
+                    <a href="koderma.html">Koderma</a>
+                    <a href="#destinations">Other Areas</a>
+                </div> -->
+            </div>
+
+            <a href="mela.html">Jhula &amp; Mela</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+        <section class="hero">
+
+            <div class="hero-glow"></div>
+            <div class="decor decor-one">✧</div>
+            <div class="decor decor-two">✦</div>
+            <div class="decor decor-three">❋</div>
+
+            <div class="hero-content">
+                <div class="eyebrow">
+                    <span></span>
+                    A FESTIVAL OF FAITH &amp; JOY
+                    <span></span>
+                </div>
+
+                <h1>
+                    Celebrate<br>
+                    <em>the Spirit of</em><br>
+                    <span class="gold-text">Durga Puja</span>
+                </h1>
+
+                <p class="hero-description">
+                    Discover beautiful pandals, joyful fairs and
+                    exciting jhulas across Nalanda, Bihar and
+                    Koderma, Jharkhand.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="nalanda.html" class="btn btn-primary">
+                        <span>♜</span> Explore Pandals <span>→</span>
+                    </a>
+
+                    <a href="mela.html" class="btn btn-outline">
+                        <span>◇</span> Discover Fairs <span>→</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- MAA DURGA IMAGE -->
+            <div class="hero-image">
+                <div class="image-frame">
+                    <img
+                        src="images/durga.png"
+                        alt="Beautiful Maa Durga idol decorated for Durga Puja"
+                        onerror="this.src='images/durga-idol.jpg'"
+                    >
+                </div>
+                <div class="image-decoration">ॐ</div>
+            </div>
+
+            <a href="#vahanas" class="scroll-down" aria-label="Scroll down">
+                <span></span>
+                <small>SCROLL TO EXPLORE</small>
+                <b>⌄</b>
+            </a>
+        </section>
+
+        <!-- DIVINE VAHANAS & DEITIES SECTION (Screenshot ke anusaar) -->
+        <section class="vahanas-section" id="vahanas">
+            <div class="vahanas-header">
+                <span class="section-label">THE SACRED COMPANIONS</span>
+                <h2>Maa Durga &amp; <span>Her Divine Vahanas</span></h2>
+                <p>The eternal guardians, holy mounts and celestial family worshipped during Sharadiya Durga Utsav.</p>
+            </div>
+
+            <div class="vahanas-container">
+
+                <!-- LEFT CARD: MAA LAKSHMI (OWL) & GANESHA (MOUSE) -->
+                <article class="vahana-card left-card">
+                    <div class="vahana-item">
+                        <div class="vahana-art">
+                            <svg viewBox="0 0 100 100" class="folk-svg" aria-hidden="true">
+                                <circle cx="50" cy="50" r="44" fill="#fff9f0" stroke="#d8a84e" stroke-width="1.5"/>
+                                <path d="M50 18 C35 18 28 32 28 55 C28 75 36 85 50 85 C64 85 72 75 72 55 C72 32 65 18 50 18 Z" fill="#ffffff" stroke="#33151b" stroke-width="2"/>
+                                <path d="M38 52 Q50 60 62 52" stroke="#8b2234" stroke-width="1.5" fill="none"/>
+                                <path d="M40 62 Q50 70 60 62" stroke="#8b2234" stroke-width="1.5" fill="none"/>
+                                <path d="M42 72 Q50 78 58 72" stroke="#8b2234" stroke-width="1.5" fill="none"/>
+                                <circle cx="42" cy="35" r="8" fill="#ffe394" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="42" cy="35" r="4" fill="#33151b"/>
+                                <circle cx="43" cy="34" r="1.5" fill="#ffffff"/>
+                                <circle cx="58" cy="35" r="8" fill="#ffe394" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="58" cy="35" r="4" fill="#33151b"/>
+                                <circle cx="59" cy="34" r="1.5" fill="#ffffff"/>
+                                <path d="M48 40 L52 40 L50 48 Z" fill="#d9822b"/>
+                                <path d="M36 22 L32 14 L42 20" stroke="#33151b" stroke-width="2" fill="none"/>
+                                <path d="M64 22 L68 14 L58 20" stroke="#33151b" stroke-width="2" fill="none"/>
+                            </svg>
+                        </div>
+                        <span class="vahana-sub">ULUK (WHITE OWL)</span>
+                        <h3>Maa Lakshmi</h3>
+                    </div>
+
+                    <div class="vahana-divider"></div>
+
+                    <div class="vahana-item">
+                        <div class="vahana-art">
+                            <svg viewBox="0 0 100 100" class="folk-svg" aria-hidden="true">
+                                <circle cx="50" cy="50" r="44" fill="#fff9f0" stroke="#d8a84e" stroke-width="1.5"/>
+                                <path d="M68 68 C68 48 52 40 38 48 C28 54 26 68 34 76 C42 84 62 82 68 68 Z" fill="#fcfbf7" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="52" cy="36" r="10" fill="#ffd8d8" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="34" cy="54" r="2.5" fill="#33151b"/>
+                                <circle cx="34.5" cy="53.5" r="0.8" fill="#fff"/>
+                                <path d="M26 60 Q20 62 16 61" stroke="#33151b" stroke-width="1.5" fill="none"/>
+                                <path d="M26 63 Q21 68 18 70" stroke="#33151b" stroke-width="1.5" fill="none"/>
+                                <path d="M68 70 Q82 68 84 52 Q85 38 76 34" stroke="#8b2234" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+                                <path d="M36 72 Q38 68 40 72 Z" fill="#ffbe2e" stroke="#33151b" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="vahana-sub">MUSHIKA (MOUSE)</span>
+                        <h3>Ganesha</h3>
+                    </div>
+                </article>
+
+                <!-- CENTER CARD: MAA DURGA & SINGHA VAHANA -->
+                <article class="vahana-card center-card">
+                    <div class="vahana-item">
+                        <div class="vahana-art main-deity">
+                            <svg viewBox="0 0 120 120" class="folk-svg-large" aria-hidden="true">
+                                <circle cx="60" cy="60" r="56" fill="#fffcf7" stroke="#f4c34f" stroke-width="2"/>
+                                <path d="M32 40 L60 10 L88 40 L76 46 L60 26 L44 46 Z" fill="#ffe08a" stroke="#8b1528" stroke-width="2"/>
+                                <circle cx="60" cy="22" r="3.5" fill="#8b1528"/>
+                                <circle cx="46" cy="32" r="2.5" fill="#d9822b"/>
+                                <circle cx="74" cy="32" r="2.5" fill="#d9822b"/>
+                                <path d="M38 46 C38 78 48 94 60 94 C72 94 82 78 82 46 Z" fill="#fff8ed" stroke="#33151b" stroke-width="2"/>
+                                <path d="M42 56 Q50 48 56 56 Q50 64 42 56 Z" fill="#ffffff" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="49" cy="56" r="3.5" fill="#111"/>
+                                <path d="M64 56 Q70 48 78 56 Q70 64 64 56 Z" fill="#ffffff" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="71" cy="56" r="3.5" fill="#111"/>
+                                <path d="M58 42 Q60 36 62 42 Q60 48 58 42 Z" fill="#b81424" stroke="#33151b" stroke-width="1.5"/>
+                                <circle cx="60" cy="50" r="3" fill="#b81424"/>
+                                <circle cx="54" cy="67" r="4" stroke="#f4c34f" stroke-width="1.5" fill="none"/>
+                                <path d="M52 74 Q60 78 68 74 Q60 82 52 74 Z" fill="#c41e3a" stroke="#33151b" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="vahana-sub red-sub">MAHISHASURA MARDINI</span>
+                        <h3 class="main-title">Maa Durga</h3>
+                    </div>
+
+                    <div class="vahana-divider gold-div"></div>
+
+                    <div class="vahana-item">
+                        <div class="vahana-art main-vahana">
+                            <svg viewBox="0 0 120 100" class="folk-svg-large" aria-hidden="true">
+                                <circle cx="60" cy="50" r="46" fill="#fffcf7" stroke="#f4c34f" stroke-width="2"/>
+                                <path d="M38 32 C30 42 28 62 42 74 C50 82 70 82 78 74 C92 62 90 42 82 32 C74 24 46 24 38 32 Z" fill="#ffe7a3" stroke="#8b1528" stroke-width="2"/>
+                                <ellipse cx="60" cy="52" rx="18" ry="16" fill="#fff5d6" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="52" cy="46" r="3" fill="#33151b"/>
+                                <circle cx="68" cy="46" r="3" fill="#33151b"/>
+                                <path d="M56 56 L64 56 L60 62 Z" fill="#8b1528"/>
+                                <path d="M54 66 Q60 70 66 66" stroke="#33151b" stroke-width="2" fill="none"/>
+                                <circle cx="42" cy="36" r="6" fill="#ffd8d8" stroke="#33151b" stroke-width="1.5"/>
+                                <circle cx="78" cy="36" r="6" fill="#ffd8d8" stroke="#33151b" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="vahana-sub red-sub">SINGHA VAHANA</span>
+                        <h3 class="highlight-text">Durga's Lion Vahana</h3>
+                    </div>
+                </article>
+
+                <!-- RIGHT CARD: MAA SARASWATI (SWAN) & KARTIKEYA (PEACOCK) -->
+                <article class="vahana-card right-card">
+                    <div class="vahana-item">
+                        <div class="vahana-art">
+                            <svg viewBox="0 0 100 100" class="folk-svg" aria-hidden="true">
+                                <circle cx="50" cy="50" r="44" fill="#fff9f0" stroke="#d8a84e" stroke-width="1.5"/>
+                                <path d="M32 40 C32 26 42 22 46 30 C48 34 46 42 42 50 C38 56 34 64 38 72 C44 80 66 82 72 70 C76 60 70 54 62 52 C52 50 48 54 44 62" fill="none" stroke="#33151b" stroke-width="2.5" stroke-linecap="round"/>
+                                <path d="M40 70 C48 78 68 76 74 66 C70 56 56 54 46 62 Z" fill="#ffffff" stroke="#33151b" stroke-width="2"/>
+                                <path d="M47 28 L56 26 L50 32 Z" fill="#d9822b"/>
+                                <circle cx="43" cy="28" r="2" fill="#33151b"/>
+                                <path d="M42 22 L40 16 L46 20" stroke="#d8a84e" stroke-width="1.5" fill="none"/>
+                            </svg>
+                        </div>
+                        <span class="vahana-sub blue-sub">HAMSA (ROYAL SWAN)</span>
+                        <h3>Maa Saraswati</h3>
+                    </div>
+
+                    <div class="vahana-divider"></div>
+
+                    <div class="vahana-item">
+                        <div class="vahana-art">
+                            <svg viewBox="0 0 100 100" class="folk-svg" aria-hidden="true">
+                                <circle cx="50" cy="50" r="44" fill="#fff9f0" stroke="#d8a84e" stroke-width="1.5"/>
+                                <path d="M26 38 Q50 16 74 38" stroke="#06d6a0" stroke-width="3" fill="none"/>
+                                <circle cx="32" cy="30" r="4" fill="#06d6a0" stroke="#33151b" stroke-width="1"/>
+                                <circle cx="50" cy="22" r="5" fill="#06d6a0" stroke="#33151b" stroke-width="1"/>
+                                <circle cx="68" cy="30" r="4" fill="#06d6a0" stroke="#33151b" stroke-width="1"/>
+                                <path d="M50 40 C44 40 40 48 44 60 C46 66 50 78 50 82 C56 78 60 66 58 56 C56 46 54 40 50 40 Z" fill="#1d4e89" stroke="#33151b" stroke-width="2"/>
+                                <circle cx="50" cy="36" r="6" fill="#1d4e89" stroke="#33151b" stroke-width="1.5"/>
+                                <path d="M50 30 L48 24 M50 30 L50 23 M50 30 L52 24" stroke="#d8a84e" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                        <span class="vahana-sub green-sub">MAYUR (PEACOCK)</span>
+                        <h3>Kartikeya</h3>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- EXPLORE DESTINATIONS SECTION -->
+        <section class="welcome" id="destinations">
+            <span class="section-label">DISCOVER THE CELEBRATION</span>
+            <h2>One Festival, <span>Many Destinations</span></h2>
+            <p>Explore Durga Puja pandals, festive fairs and exciting jhulas near you.</p>
+
+            <!-- Search box with live filter
+            <label class="search-box">
+                <span aria-hidden="true">⌕</span>
+                <input
+                    type="search"
+                    id="homeSearch"
+                    placeholder="Search Nalanda, Koderma, Mela..."
+                    aria-label="Search festival destinations"
+                >
+            </label> -->
+
+            <div class="place-grid" id="homePlaceGrid">
+                <article class="place-card" id="nalanda" data-search="nalanda bihar pandal celebration">
+                    <span>01</span>
+                    <h3>Nalanda, Bihar</h3>
+                    <p>Explore famous pandals in Amber, Pulpar, Khandakpar &amp; more.</p>
+                    <a href="nalanda.html">Explore Nalanda Pandals →</a>
+                </article>
+
+                <article class="place-card" id="koderma" data-search="koderma jharkhand pandal celebration">
+                    <span>02</span>
+                    <h3>Koderma, Jharkhand</h3>
+                    <p>Discover vibrant celebrations in Jhumri Telaiya, Belatand &amp; more.</p>
+                    <a href="koderma.html">Explore Koderma Pandals →</a>
+                </article>
+
+                <article class="place-card" id="mela" data-search="jhula mela fair rides local attractions">
+                    <span>03</span>
+                    <h3>Jhula &amp; Mela</h3>
+                    <p>Experience grand night carnivals, giant wheels &amp; delicious street food.</p>
+                    <a href="mela.html">Discover Mela &amp; Rides →</a>
+                </article>
+            </div>
+
+            <p class="no-results" id="homeNoResults" hidden>No destinations found matching your search.</p>
+        </section>
+
+        <!-- GALLERY PREVIEW BANNER -->
+        <section class="extra-section gallery-preview-section" id="gallery">
+            <span class="section-label">FESTIVAL MEMORIES</span>
+            <h2>Interactive <span>Photo Gallery</span></h2>
+            <p>Watch auto-scrolling pandal memories, live spotlight showcases, and stunning night lighting.</p>
+            <a href="gallery.html" class="btn btn-primary" style="margin-top: 22px;">
+                <span>✦</span> Open Live Gallery <span>→</span>
+            </a>
+        </section>
+
+        <!-- CONTACT & EMERGENCY HELPLINE SECTION -->
+        <section class="contact-section" id="contact">
+            <div class="contact-card">
+                <span class="section-label">PUJA HELP &amp; DIRECTORY</span>
+                <h2>Contact &amp; <span>Helpline Numbers</span></h2>
+                <p>Stay safe and connected during the Durga Puja festival.</p>
+
+                <div class="helpline-grid">
+                    <div class="help-item">
+                        <span class="help-icon">🚨</span>
+                        <h4>Police Control</h4>
+                        <p class="help-number"><a href="tel:112">112</a> / <a href="tel:100">100</a></p>
+                    </div>
+
+                    <div class="help-item">
+                        <span class="help-icon">🚑</span>
+                        <h4>Ambulance</h4>
+                        <p class="help-number"><a href="tel:108">108</a> / <a href="tel:102">102</a></p>
+                    </div>
+
+                    <div class="help-item">
+                        <span class="help-icon">🚒</span>
+                        <h4>Fire Brigade</h4>
+                        <p class="help-number"><a href="tel:101">101</a></p>
+                    </div>
+
+                    <div class="help-item">
+                        <span class="help-icon">💬</span>
+                        <h4>WhatsApp Support</h4>
+                        <p class="help-number"><a href="https://wa.me/" target="_blank" rel="noopener">Chat with Helpdesk</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <a href="index.html" class="footer-logo">✿ Durga Utsav</a>
+            <p>Pandal · Mela · Celebration</p>
+            <p>Celebrating the divine spirit of Durga Puja across Nalanda, Bihar and Koderma, Jharkhand.</p>
+            <small>© 2026 Durga Utsav. All rights reserved.</small>
+        </footer>
+    </main>
+     <!-- SCROLL TO TOP ARROW BUTTON -->
+    <button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑ </button>
+
+    <script src="script.js"></script>
+    <script src="music.js"></script>
+
+</body>
+</html>

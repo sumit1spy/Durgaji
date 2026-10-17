@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nalanda Durga Puja | Durga Utsav</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nalanda.css">
+</head>
+<body>
+     <!-- FLOATING MUSIC BUTTON (Persists across pages) -->
+    <button class="floating-music-btn" id="musicToggle" aria-label="Toggle festive music" title="Play / Pause Festive Song">
+        <span class="music-icon">♪</span>
+    </button>
+    <!-- Background Audio element: Place your mp3 at audio/song.mp3 -->
+    <audio id="bgAudio" src="WhatsApp Audio 2026-10-17 at 12.46.02 PM.mpeg" loop preload="auto" ></audio>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-flower">✿</span>
+            <span class="logo-text">
+                <span class="logo-name">Durga <b>Utsav</b></span>
+                <small>PANDAL · MELA · CELEBRATION</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="nalanda.html" class="drop-link active">Bihar </a>
+        <!-- <div class="dropdown-menu">
+            <a href="nalanda.html">Nalanda</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <div class="dropdown">
+        <a href="koderma.html" class="drop-link">Jharkhand </a>
+        <!-- <div class="dropdown-menu">
+            <a href="koderma.html">Koderma</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <a href="mela.html">Jhula &amp; Mela</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+    </header>
+
+    <main>
+        <section class="nalanda-hero">
+            <span class="nalanda-eyebrow">DURGA PUJA · BIHAR</span>
+            <h1>Celebrate Durga Puja<br><span>in Nalanda</span></h1>
+            <p>Explore pandals and festive celebrations across Nalanda.</p>
+            <a href="#locations" class="nalanda-button">Explore Locations <span>↓</span></a>
+            <span class="hero-ornament ornament-left">✦</span>
+            <span class="hero-ornament ornament-right">✧</span>
+        </section>
+
+        <section class="locations-section" id="locations">
+            <div class="locations-heading">
+                <span class="section-label">FIND YOUR CELEBRATION</span>
+                <h2>Nalanda <span>Locations</span></h2>
+                <p>Explore pandal photos and open locations directly in Google Maps.</p>
+            </div>
+
+            <div class="location-grid" id="locationGrid">
+
+                <!-- Photo placeholder: images/amber.jpg -->
+                <article class="location-card" data-location="Amber, Nalanda, Bihar">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Amber photo</div>
+                        <img src="images/amber.jpg" alt="Durga Puja pandal in Amber, Nalanda">
+                        <span class="photo-number">01</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">NALANDA, BIHAR</span>
+                        <h3>Amber</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- Photo placeholder: images/pulpar.jpg -->
+                <article class="location-card" data-location="Pulpar, Nalanda, Bihar">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Pulpar photo</div>
+                        <img src="images/pulpar.jpg" alt="Durga Puja pandal in Pulpar, Nalanda">
+                        <span class="photo-number">02</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">NALANDA, BIHAR</span>
+                        <h3>Pulpar</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- Photo placeholder: images/khandakpar.jpg -->
+                <article class="location-card" data-location="Khandakpar, Nalanda, Bihar">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Khandakpar photo</div>
+                        <img src="images/khandakpar.jpg" alt="Durga Puja pandal in Khandakpar, Nalanda">
+                        <span class="photo-number">03</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">NALANDA, BIHAR</span>
+                        <h3>Khandakpar</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- Photo placeholder: images/mohaddi-nagar.jpg -->
+                <article class="location-card" data-location="Mohaddi Nagar, Nalanda, Bihar">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Mohaddi Nagar photo</div>
+                        <img src="images/mohaddi-nagar.jpg" alt="Durga Puja pandal in Mohaddi Nagar, Nalanda">
+                        <span class="photo-number">04</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">NALANDA, BIHAR</span>
+                        <h3>Mohaddi Nagar</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- Photo placeholder: images/atwari-bazar.jpg -->
+                <article class="location-card" data-location="Atwari Bazar, Nalanda, Bihar">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Atwari Bazar photo</div>
+                        <img src="images/atwari-bazar.jpg" alt="Durga Puja pandal in Atwari Bazar, Nalanda">
+                        <span class="photo-number">05</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">NALANDA, BIHAR</span>
+                        <h3>Atwari Bazar</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- Photo placeholder: images/nai-sarai.jpg -->
+                <article class="location-card" data-location="Nai Sarai, Nalanda, Bihar">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Nai Sarai photo</div>
+                        <img src="images/nai-sarai.jpg" alt="Durga Puja pandal in Nai Sarai, Nalanda">
+                        <span class="photo-number">06</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">NALANDA, BIHAR</span>
+                        <h3>Nai Sarai</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- Photo placeholder: images/sohsarai.jpg -->
+                <article class="location-card" data-location="Sohsarai, Nalanda, Bihar">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Sohsarai photo</div>
+                        <img src="images/sohsarai.jpg" alt="Durga Puja pandal in Sohsarai, Nalanda">
+                        <span class="photo-number">07</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">NALANDA, BIHAR</span>
+                        <h3>Sohsarai</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="nalanda-note" id="jharkhand">
+            <span>✿</span>
+            <p>More festive destinations and celebration details will be added soon.</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <a href="index.html" class="footer-logo">✿ Durga Utsav</a>
+        <p>Pandal · Mela · Celebration</p>
+        <p>Celebrating the spirit of Durga Puja.</p>
+        <small>© 2026 Durga Utsav. All rights reserved.</small>
+    </footer>
+      <!-- SCROLL TO TOP ARROW BUTTON -->
+    <button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑ </button>
+
+    <script src="nalanda.js"></script>
+    <script src="music.js"></script>
+    <!-- SCROLL TO TOP ARROW BUTTON -->
+    <!--<button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑</button>
+
+</body>
+</html>

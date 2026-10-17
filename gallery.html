@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Durga Puja Photo Gallery | Durga Utsav</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body class="gallery-body">
+
+    <!-- FLOATING MUSIC BUTTON (Persists across pages) -->
+    <button class="floating-music-btn" id="musicToggle" aria-label="Toggle festive music" title="Play / Pause Festive Song">
+        <span class="music-icon">♪</span>
+    </button>
+    <!-- Background Audio element: Place your mp3 at audio/song.mp3 -->
+    <audio id="bgAudio" src="WhatsApp Audio 2026-10-17 at 12.46.02 PM.mpeg" loop preload="auto" ></audio>
+
+    <!-- NAVBAR -->
+    <header class="navbar gallery-navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-flower">✿</span>
+            <span class="logo-text">
+                <span class="logo-name">Durga <b>Utsav</b></span>
+                <small>PANDAL · MELA · CELEBRATION</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+       <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="nalanda.html" class="drop-link">Bihar </a>
+        <!-- <div class="dropdown-menu">
+            <a href="nalanda.html">Nalanda</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <div class="dropdown">
+        <a href="koderma.html" class="drop-link">Jharkhand </a>
+        <!-- <div class="dropdown-menu">
+            <a href="koderma.html">Koderma</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <a href="mela.html">Jhula &amp; Mela</a>
+    <a href="gallery.html" class="active">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+    </header>
+
+    <main class="gallery-main">
+        <!-- FLOATING PARTICLES CANVAS -->
+        <div class="particles-container" id="particlesContainer" aria-hidden="true"></div>
+
+        <!-- GALLERY HEADER -->
+        <section class="gallery-top-bar">
+            <h1>Durga Puja <em>Photo Gallery</em></h1>
+            <p>Hover on any side photo to spotlight it in the center, or enjoy the live showcase.</p>
+
+            <!-- CATEGORY FILTER PILLS -->
+            <div class="gallery-pills" id="galleryPills">
+                <button class="pill active" data-category="all">All Photos</button>
+                <button class="pill" data-category="nalanda">Nalanda</button>
+                <button class="pill" data-category="koderma">Koderma</button>
+                <button class="pill" data-category="pandal">Pandals</button>
+                <button class="pill" data-category="idol">Maa Durga</button>
+                <button class="pill" data-category="mela">Jhula &amp; Mela</button>
+            </div>
+        </section>
+
+        <!-- THREE-COLUMN INTERACTIVE SHOWCASE STAGE -->
+        <section class="gallery-stage" id="gallery-stage">
+
+            <!-- LEFT STREAM: TWO COLUMNS SCROLLING UP -->
+            <div class="stream-wrapper stream-left">
+                <!-- Column 1 (Scrolls Up) -->
+                <div class="stream-column scroll-up" id="leftCol1">
+                    <div class="stream-inner">
+                        <div class="stream-item" data-img="images/pandal-night.jpg" data-title="Grand Illuminated Temple Pandal" data-location="Amber, Nalanda, Bihar" data-category="PANDAL">
+                            <img src="images/pandal-night.jpg" alt="Grand Illuminated Temple Pandal">
+                            <span class="item-label">Amber Pandal</span>
+                        </div>
+                        <div class="stream-item" data-img="images/durga-idol.jpg" data-title="Maa Durga Divya Pratima" data-location="Khandakpar, Nalanda" data-category="MAA DURGA">
+                            <img src="images/durga-idol.jpg" alt="Maa Durga Divya Pratima">
+                            <span class="item-label">Maa Durga</span>
+                        </div>
+                        <div class="stream-item" data-img="images/giant-wheel.jpg" data-title="Towering Giant Ferris Wheel" data-location="Soghra College Ground, Bihar Sharif" data-category="MELA">
+                            <img src="images/giant-wheel.jpg" alt="Towering Giant Ferris Wheel">
+                            <span class="item-label">Giant Wheel</span>
+                        </div>
+                        <div class="stream-item" data-img="images/dhunuchi-dance.jpg" data-title="Traditional Dhunuchi Aarti" data-location="Pulpar, Nalanda" data-category="UTSAV">
+                            <img src="images/dhunuchi-dance.jpg" alt="Traditional Dhunuchi Aarti">
+                            <span class="item-label">Dhunuchi Dance</span>
+                        </div>
+                        <div class="stream-item" data-img="images/break-dance.jpg" data-title="High-Speed Break Dance Ride" data-location="CH School Ground, Jhumri Telaiya" data-category="MELA">
+                            <img src="images/break-dance.jpg" alt="High-Speed Break Dance Ride">
+                            <span class="item-label">Break Dance</span>
+                        </div>
+                        <!-- Duplicates for seamless infinite loop -->
+                        <div class="stream-item" data-img="images/pandal-night.jpg" data-title="Grand Illuminated Temple Pandal" data-location="Amber, Nalanda, Bihar" data-category="PANDAL">
+                            <img src="images/pandal-night.jpg" alt="Grand Illuminated Temple Pandal">
+                            <span class="item-label">Amber Pandal</span>
+                        </div>
+                        <div class="stream-item" data-img="images/durga-idol.jpg" data-title="Maa Durga Divya Pratima" data-location="Khandakpar, Nalanda" data-category="MAA DURGA">
+                            <img src="images/durga-idol.jpg" alt="Maa Durga Divya Pratima">
+                            <span class="item-label">Maa Durga</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 (Scrolls Up with different speed) -->
+                <div class="stream-column scroll-up slow" id="leftCol2">
+                    <div class="stream-inner">
+                        <div class="stream-item" data-img="images/mela-food.jpg" data-title="Hot Jalebi &amp; Festive Chaat" data-location="Bada Bazar, Jhumri Telaiya" data-category="MELA FOOD">
+                            <img src="images/mela-food.jpg" alt="Hot Jalebi &amp; Festive Chaat">
+                            <span class="item-label">Jalebi &amp; Chaat</span>
+                        </div>
+                        <div class="stream-item" data-img="images/columbus.jpg" data-title="Swinging Columbus Boat Ride" data-location="CH School Ground, Koderma" data-category="MELA">
+                            <img src="images/columbus.jpg" alt="Swinging Columbus Boat Ride">
+                            <span class="item-label">Columbus Boat</span>
+                        </div>
+                        <div class="stream-item" data-img="images/dragon-train.jpg" data-title="Dragon Coaster Fair Ride" data-location="Bihar Sharif Mela" data-category="MELA">
+                            <img src="images/dragon-train.jpg" alt="Dragon Coaster Fair Ride">
+                            <span class="item-label">Dragon Train</span>
+                        </div>
+                        <div class="stream-item" data-img="images/pandal-night.jpg" data-title="Golden Heritage Pandal" data-location="Jhanda Chowk, Jhumri Telaiya" data-category="PANDAL">
+                            <img src="images/pandal-night.jpg" alt="Golden Heritage Pandal">
+                            <span class="item-label">Jhanda Chowk</span>
+                        </div>
+                        <!-- Duplicates -->
+                        <div class="stream-item" data-img="images/mela-food.jpg" data-title="Hot Jalebi &amp; Festive Chaat" data-location="Bada Bazar, Jhumri Telaiya" data-category="MELA FOOD">
+                            <img src="images/mela-food.jpg" alt="Hot Jalebi &amp; Festive Chaat">
+                            <span class="item-label">Jalebi &amp; Chaat</span>
+                        </div>
+                        <div class="stream-item" data-img="images/columbus.jpg" data-title="Swinging Columbus Boat Ride" data-location="CH School Ground, Koderma" data-category="MELA">
+                            <img src="images/columbus.jpg" alt="Swinging Columbus Boat Ride">
+                            <span class="item-label">Columbus Boat</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CENTER: BIG SPOTLIGHT SHOWCASE -->
+            <div class="spotlight-center">
+                <div class="spotlight-card" id="spotlightCard">
+                    <div class="spotlight-photo-wrap">
+                        <img id="spotlightImg" src="images/pandal-night.jpg" alt="Featured Durga Puja Showcase">
+                        <span class="spotlight-tag" id="spotlightTag">PANDAL</span>
+                        <button class="spotlight-expand-btn" id="expandBtn" title="View Fullscreen">⛶</button>
+                    </div>
+
+                    <div class="spotlight-overlay">
+                        <div class="spotlight-info">
+                            <span class="spotlight-loc" id="spotlightLoc">Amber, Nalanda, Bihar</span>
+                            <h2 id="spotlightTitle">Grand Illuminated Temple Pandal</h2>
+                        </div>
+                        <a id="spotlightMap" class="spotlight-map-btn" href="https://www.google.com/maps/search/?api=1&query=Amber+Nalanda+Durga+Puja" target="_blank" rel="noopener">Open in Maps <span>↗</span></a>
+                    </div>
+
+                    <!-- Progress bar for auto-change -->
+                    <div class="spotlight-progress-bar">
+                        <div class="spotlight-progress" id="spotlightProgress"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT STREAM: TWO COLUMNS SCROLLING DOWN -->
+            <div class="stream-wrapper stream-right">
+                <!-- Column 1 (Scrolls Down) -->
+                <div class="stream-column scroll-down" id="rightCol1">
+                    <div class="stream-inner">
+                        <div class="stream-item" data-img="images/durga-idol.jpg" data-title="Traditional Sholar Saaj Maa Durga" data-location="Station Road, Koderma" data-category="MAA DURGA">
+                            <img src="images/durga-idol.jpg" alt="Traditional Sholar Saaj Maa Durga">
+                            <span class="item-label">Sholar Saaj</span>
+                        </div>
+                        <div class="stream-item" data-img="images/toy-train.jpg" data-title="Kids Miniature Toy Train &amp; Cars" data-location="Soghra College Ground, Bihar Sharif" data-category="MELA">
+                            <img src="images/toy-train.jpg" alt="Kids Miniature Toy Train &amp; Cars">
+                            <span class="item-label">Toy Train</span>
+                        </div>
+                        <div class="stream-item" data-img="images/mickey-mouse.jpg" data-title="Mickey Mouse Jumping Castle" data-location="Jhumri Telaiya Fair" data-category="KIDS ZONE">
+                            <img src="images/mickey-mouse.jpg" alt="Mickey Mouse Jumping Castle">
+                            <span class="item-label">Jumping Castle</span>
+                        </div>
+                        <div class="stream-item" data-img="images/pandal-night.jpg" data-title="Temple Pavilion of Lights" data-location="Sohsarai, Nalanda" data-category="PANDAL">
+                            <img src="images/pandal-night.jpg" alt="Temple Pavilion of Lights">
+                            <span class="item-label">Sohsarai Pandal</span>
+                        </div>
+                        <!-- Duplicates -->
+                        <div class="stream-item" data-img="images/durga-idol.jpg" data-title="Traditional Sholar Saaj Maa Durga" data-location="Station Road, Koderma" data-category="MAA DURGA">
+                            <img src="images/durga-idol.jpg" alt="Traditional Sholar Saaj Maa Durga">
+                            <span class="item-label">Sholar Saaj</span>
+                        </div>
+                        <div class="stream-item" data-img="images/toy-train.jpg" data-title="Kids Miniature Toy Train &amp; Cars" data-location="Soghra College Ground, Bihar Sharif" data-category="MELA">
+                            <img src="images/toy-train.jpg" alt="Kids Miniature Toy Train &amp; Cars">
+                            <span class="item-label">Toy Train</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 2 (Scrolls Down with different speed) -->
+                <div class="stream-column scroll-down slow" id="rightCol2">
+                    <div class="stream-inner">
+                        <div class="stream-item" data-img="images/dhunuchi-dance.jpg" data-title="Maha Aarti &amp; Dhunuchi Nritya" data-location="Belatand, Koderma" data-category="UTSAV">
+                            <img src="images/dhunuchi-dance.jpg" alt="Maha Aarti &amp; Dhunuchi Nritya">
+                            <span class="item-label">Dhunuchi Nritya</span>
+                        </div>
+                        <div class="stream-item" data-img="images/giant-wheel.jpg" data-title="Carnival Night Giant Wheel" data-location="CH School Ground, Jhumri Telaiya" data-category="MELA">
+                            <img src="images/giant-wheel.jpg" alt="Carnival Night Giant Wheel">
+                            <span class="item-label">Night Wheel</span>
+                        </div>
+                        <div class="stream-item" data-img="images/break-dance.jpg" data-title="Electric Tsunami Ride" data-location="Hospital More, Bihar Sharif" data-category="MELA">
+                            <img src="images/break-dance.jpg" alt="Electric Tsunami Ride">
+                            <span class="item-label">Tsunami Spin</span>
+                        </div>
+                        <div class="stream-item" data-img="images/columbus.jpg" data-title="High Swing Boat Experience" data-location="Bada Bazar Mela, Telaiya" data-category="MELA">
+                            <img src="images/columbus.jpg" alt="High Swing Boat Experience">
+                            <span class="item-label">Columbus Ship</span>
+                        </div>
+                        <!-- Duplicates -->
+                        <div class="stream-item" data-img="images/dhunuchi-dance.jpg" data-title="Maha Aarti &amp; Dhunuchi Nritya" data-location="Belatand, Koderma" data-category="UTSAV">
+                            <img src="images/dhunuchi-dance.jpg" alt="Maha Aarti &amp; Dhunuchi Nritya">
+                            <span class="item-label">Dhunuchi Nritya</span>
+                        </div>
+                        <div class="stream-item" data-img="images/giant-wheel.jpg" data-title="Carnival Night Giant Wheel" data-location="CH School Ground, Jhumri Telaiya" data-category="MELA">
+                            <img src="images/giant-wheel.jpg" alt="Carnival Night Giant Wheel">
+                            <span class="item-label">Night Wheel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- FULLSCREEN LIGHTBOX MODAL -->
+        <div class="lightbox-modal" id="lightboxModal" hidden>
+            <div class="lightbox-backdrop" id="lightboxBackdrop"></div>
+            <div class="lightbox-content">
+                <button class="lightbox-close" id="lightboxClose" aria-label="Close Lightbox">✕</button>
+                <button class="lightbox-arrow prev" id="lightboxPrev" aria-label="Previous Image">‹</button>
+                <img id="lightboxImg" src="" alt="Fullscreen View">
+                <button class="lightbox-arrow next" id="lightboxNext" aria-label="Next Image">›</button>
+                <div class="lightbox-caption">
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxLoc"></p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <a href="index.html" class="footer-logo">✿ Durga Utsav</a>
+        <p>Pandal · Mela · Celebration</p>
+        <p>Celebrating the spirit of Durga Puja across Bihar &amp; Jharkhand.</p>
+        <small>© 2026 Durga Utsav. All rights reserved.</small>
+    </footer>
+      <!-- SCROLL TO TOP ARROW BUTTON -->
+    <button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑ </button>
+
+    <script src="gallery.js"></script>
+    <script src="music.js"></script>
+    <!-- SCROLL TO TOP ARROW BUTTON -->
+    <!--<button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑</button>
+</body>
+</html>

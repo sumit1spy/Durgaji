@@ -1,0 +1,685 @@
+/* ====================================================
+   DURGA UTSAV - JHULA & MELA (NIGHT CARNIVAL THEME)
+==================================================== */
+
+:root {
+    --mela-bg: #090e24;
+    --mela-card: #121b3e;
+    --mela-card-hover: #192452;
+    --mela-border: #243468;
+    --neon-gold: #ffbe2e;
+    --neon-amber: #f77f00;
+    --neon-pink: #ff2a70;
+    --neon-teal: #06d6a0;
+    --text-light: #f5f7fc;
+    --text-muted: #abb8db;
+}
+
+body.mela-body {
+    background-color: var(--mela-bg);
+    color: var(--text-light);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAVBAR TWEAKS FOR NIGHT CARNIVAL */
+.mela-navbar {
+    background: linear-gradient(110deg, #070b1c, #131d3f, #0a0f26);
+    border-bottom: 2px solid var(--neon-gold);
+    box-shadow: 0 10px 30px #03061270;
+}
+
+/* =========================
+   CARNIVAL HERO SECTION
+========================= */
+
+.carnival-hero {
+    min-height: 430px;
+    padding: 85px 20px 75px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    color: var(--text-light);
+    background:
+        radial-gradient(ellipse at 50% 20%, #1c2b66 0%, transparent 60%),
+        radial-gradient(circle at 80% 80%, #ffbe2e15 0%, transparent 40%),
+        radial-gradient(circle at 20% 80%, #ff2a7015 0%, transparent 40%),
+        linear-gradient(180deg, #090e24, #0e1538);
+}
+
+/* Fairy Lights Garland */
+.fairy-lights {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 25px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.fairy-lights span {
+    width: 8px;
+    height: 12px;
+    border-radius: 50%;
+    animation: bulbGlow 1.8s infinite alternate;
+}
+
+.fairy-lights span:nth-child(3n+1) { background: #ffbe2e; box-shadow: 0 0 10px #ffbe2e; animation-delay: 0.1s; }
+.fairy-lights span:nth-child(3n+2) { background: #ff2a70; box-shadow: 0 0 10px #ff2a70; animation-delay: 0.5s; }
+.fairy-lights span:nth-child(3n+3) { background: #06d6a0; box-shadow: 0 0 10px #06d6a0; animation-delay: 0.9s; }
+
+@keyframes bulbGlow {
+    from { opacity: 0.4; transform: scale(0.85); }
+    to { opacity: 1; transform: scale(1.15); }
+}
+
+.carnival-eyebrow {
+    display: inline-block;
+    color: var(--neon-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.carnival-hero h1 {
+    margin-top: 18px;
+    font: 700 clamp(40px, 6vw, 68px)/1.12 'Playfair Display', serif;
+}
+
+.neon-gold {
+    color: var(--neon-gold);
+    text-shadow: 0 0 25px #ffbe2e40;
+    font-style: italic;
+}
+
+.carnival-hero p {
+    max-width: 680px;
+    margin: 18px auto 30px;
+    color: var(--text-muted);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+/* Action Buttons */
+.hero-action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-carnival-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 25px;
+    border-radius: 30px;
+    color: #0b1129;
+    background: linear-gradient(120deg, #ffe08a, var(--neon-gold));
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 6px 20px #ffbe2e35;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.btn-carnival-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px #ffbe2e60;
+}
+
+.btn-carnival-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 25px;
+    border-radius: 30px;
+    color: var(--text-light);
+    border: 1px solid #4a5c96;
+    background: #141f4870;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s;
+}
+
+.btn-carnival-outline:hover {
+    border-color: var(--neon-gold);
+    color: var(--neon-gold);
+    background: #1b295f;
+    transform: translateY(-3px);
+}
+
+/* Floating Fair Ornaments */
+.fair-ornament {
+    position: absolute;
+    font-size: 38px;
+    opacity: 0.7;
+    pointer-events: none;
+    animation: float 4s ease-in-out infinite;
+}
+
+.ornament-1 { left: 9%; top: 35%; animation-delay: 0s; }
+.ornament-2 { right: 10%; top: 25%; font-size: 28px; animation-delay: 1.5s; }
+.ornament-3 { right: 8%; bottom: 20%; animation-delay: 2.5s; }
+
+/* =========================
+   CARNIVAL HEADINGS & LABELS
+========================= */
+
+.carnival-heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+}
+
+.carnival-tag {
+    display: inline-block;
+    color: var(--neon-gold);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.carnival-heading h2 {
+    color: var(--text-light);
+    font: 700 clamp(32px, 4.5vw, 48px) 'Playfair Display', serif;
+}
+
+.carnival-heading h2 span {
+    color: var(--neon-gold);
+    font-style: italic;
+}
+
+.carnival-heading p {
+    margin-top: 12px;
+    color: var(--text-muted);
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+/* Filter Pills */
+.ride-filters {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+}
+
+.filter-pill {
+    padding: 8px 18px;
+    border-radius: 20px;
+    border: 1px solid var(--mela-border);
+    background: #0d1533;
+    color: var(--text-muted);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.filter-pill:hover,
+.filter-pill.active {
+    background: var(--neon-gold);
+    color: #0b1129;
+    border-color: var(--neon-gold);
+    box-shadow: 0 4px 15px #ffbe2e30;
+}
+
+/* =========================
+   RIDES SECTION & CARDS
+========================= */
+
+.rides-section {
+    padding: 75px 6% 90px;
+    background:
+        radial-gradient(circle at 10% 20%, #162452 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, #1f1442 0%, transparent 40%),
+        var(--mela-bg);
+}
+
+.rides-grid {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 26px;
+}
+
+.ride-card {
+    background: var(--mela-card);
+    border: 1px solid var(--mela-border);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+    box-shadow: 0 10px 30px #02051260;
+}
+
+.ride-card:hover {
+    transform: translateY(-7px);
+    border-color: var(--neon-gold);
+    box-shadow: 0 18px 40px #ffbe2e20;
+}
+
+.ride-photo {
+    height: 225px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #182554, #0f1738);
+}
+
+.ride-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.ride-card:hover .ride-photo img {
+    transform: scale(1.08);
+}
+
+.photo-placeholder {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    text-align: center;
+    color: var(--neon-gold);
+    font: 600 15px 'DM Sans', sans-serif;
+    background: radial-gradient(circle, #1a2a5e, #0e1638);
+}
+
+.thrill-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 2;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.thrill-badge.extreme { background: var(--neon-pink); color: #fff; box-shadow: 0 0 15px #ff2a7060; }
+.thrill-badge.high { background: var(--neon-amber); color: #fff; box-shadow: 0 0 15px #f77f0060; }
+.thrill-badge.family { background: var(--neon-teal); color: #05261e; }
+.thrill-badge.kids { background: #4cc9f0; color: #042433; }
+
+.price-tag {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    z-index: 2;
+    padding: 4px 10px;
+    border-radius: 12px;
+    background: #0b1129cc;
+    border: 1px solid var(--neon-gold);
+    color: var(--neon-gold);
+    font-size: 11px;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+}
+
+.ride-info {
+    padding: 22px 20px 24px;
+}
+
+.ride-category-text {
+    display: inline-block;
+    color: var(--neon-gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.ride-info h3 {
+    margin: 0 0 10px;
+    color: var(--text-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.ride-info p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+}
+
+.ride-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 14px;
+    border-top: 1px solid #1e2c59;
+    font-size: 12px;
+    color: #92a4cf;
+    font-weight: 500;
+}
+
+/* =========================
+   MELA GROUNDS SECTION
+========================= */
+
+.grounds-section {
+    padding: 80px 6%;
+    background: linear-gradient(180deg, #0e1538, #090e24);
+    border-top: 1px solid var(--mela-border);
+}
+
+.grounds-grid {
+    width: min(1140px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.ground-card {
+    background: var(--mela-card);
+    border: 1px solid var(--mela-border);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.ground-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-gold);
+}
+
+.ground-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 14px;
+}
+
+.bihar-tag { background: #ffbe2e20; color: var(--neon-gold); border: 1px solid #ffbe2e50; }
+.jharkhand-tag { background: #06d6a020; color: var(--neon-teal); border: 1px solid #06d6a050; }
+
+.ground-card h3 {
+    color: var(--text-light);
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 6px;
+}
+
+.ground-area {
+    color: var(--neon-gold);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.ground-card p {
+    color: var(--text-muted);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.map-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: 22px;
+    background: linear-gradient(120deg, #ffe08a, var(--neon-gold));
+    color: #0c132c;
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.map-pill:hover {
+    transform: translateY(-2px);
+}
+
+/* =========================
+   STREET FOOD & BAZAR SECTION
+========================= */
+
+.food-section {
+    padding: 85px 6%;
+    background: radial-gradient(circle at 50% 50%, #15224e, #090e24);
+    border-top: 1px solid var(--mela-border);
+}
+
+.food-container {
+    width: min(1140px, 100%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.food-image {
+    height: 380px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 2px solid var(--mela-border);
+    box-shadow: 0 15px 40px #02061480;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.food-content h2 {
+    color: var(--text-light);
+    font: 700 clamp(30px, 4vw, 44px) 'Playfair Display', serif;
+    margin: 12px 0 16px;
+}
+
+.food-content h2 span {
+    color: var(--neon-gold);
+    font-style: italic;
+}
+
+.food-content > p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 26px;
+}
+
+.food-features {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.food-feat-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 18px;
+    border-radius: 14px;
+    background: var(--mela-card);
+    border: 1px solid var(--mela-border);
+}
+
+.food-icon {
+    font-size: 26px;
+}
+
+.food-feat-item h4 {
+    color: var(--text-light);
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+.food-feat-item small {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* =========================
+   VISITOR TIPS & GUIDELINES
+========================= */
+
+.tips-section {
+    padding: 30px 6% 90px;
+}
+
+.tips-box {
+    width: min(1140px, 100%);
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, #111a3d, #0d1533);
+    border: 1px solid var(--neon-gold);
+    box-shadow: 0 10px 30px #ffbe2e15;
+}
+
+.tips-box h3 {
+    text-align: center;
+    color: var(--neon-gold);
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.tip-card {
+    background: #080d2280;
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid #1e2c59;
+}
+
+.tip-icon {
+    font-size: 28px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.tip-card h4 {
+    color: var(--text-light);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.tip-card p {
+    color: var(--text-muted);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 950px) {
+    .rides-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .grounds-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .food-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .food-image {
+        height: 280px;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .carnival-hero {
+        padding: 65px 18px 55px;
+    }
+
+    .fair-ornament {
+        display: none;
+    }
+
+    .rides-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tips-box {
+        padding: 25px 18px;
+    }
+
+    .hero-action-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-carnival-primary,
+    .btn-carnival-outline {
+        justify-content: center;
+    }
+}
+/* =======================================
+   SCROLL TO TOP BUTTON (Universal)
+======================================= */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 998;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    background: linear-gradient(135deg, #741329, #450817);
+    color: var(--gold);
+    font-size: 20px;
+    font-weight: 700;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4), 0 0 15px rgba(244, 195, 79, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.back-to-top-btn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top-btn:hover {
+    background: linear-gradient(135deg, #ffe08a, var(--gold));
+    color: #450817;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(244, 195, 79, 0.6);
+}

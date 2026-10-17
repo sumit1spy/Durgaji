@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koderma Durga Puja | Durga Utsav</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="koderma.css">
+</head>
+<body>
+     <!-- FLOATING MUSIC BUTTON (Persists across pages) -->
+    <button class="floating-music-btn" id="musicToggle" aria-label="Toggle festive music" title="Play / Pause Festive Song">
+        <span class="music-icon">♪</span>
+    </button>
+    <!-- Background Audio element: Place your mp3 at audio/song.mp3 -->
+    <audio id="bgAudio" src="WhatsApp Audio 2026-10-17 at 12.46.02 PM.mpeg" loop preload="auto" ></audio>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-flower">✿</span>
+            <span class="logo-text">
+                <span class="logo-name">Durga <b>Utsav</b></span>
+                <small>PANDAL · MELA · CELEBRATION</small>
+            </span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+
+    <div class="dropdown">
+        <a href="nalanda.html" class="drop-link">Bihar </a>
+        <!-- <div class="dropdown-menu">
+            <a href="nalanda.html">Nalanda</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <div class="dropdown">
+        <a href="koderma.html" class="drop-link active">Jharkhand </a>
+        <!-- <div class="dropdown-menu">
+            <a href="koderma.html">Koderma</a>
+            <a href="index.html#destinations">Other Areas</a>
+        </div> -->
+    </div>
+
+    <a href="mela.html">Jhula &amp; Mela</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="index.html#contact">Contact</a>
+</nav>
+    </header>
+
+    <main>
+        <section class="koderma-hero">
+            <span class="koderma-eyebrow">DURGA PUJA · JHARKHAND</span>
+            <h1>Celebrate Durga Puja<br><span>in Koderma</span></h1>
+            <p>Explore grand pandals and festive celebrations across Koderma &amp; Jhumri Telaiya.</p>
+            <a href="#locations" class="koderma-button">Explore Locations <span>↓</span></a>
+            <span class="hero-ornament ornament-left">✦</span>
+            <span class="hero-ornament ornament-right">✧</span>
+        </section>
+
+        <section class="locations-section" id="locations">
+            <div class="locations-heading">
+                <span class="section-label">FIND YOUR CELEBRATION</span>
+                <h2>Koderma <span>Locations</span></h2>
+                <p>Explore pandal photos and open locations directly in Google Maps.</p>
+            </div>
+
+            <div class="location-grid" id="locationGrid">
+
+                <!-- 01: Jhanda Chowk -->
+                <article class="location-card" data-location="Jhanda Chowk, Jhumri Telaiya, Koderma, Jharkhand">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Jhanda Chowk photo</div>
+                        <img src="images/jhanda-chowk.jpg" alt="Durga Puja pandal at Jhanda Chowk, Jhumri Telaiya">
+                        <span class="photo-number">01</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">JHUMRI TELAIYA, KODERMA</span>
+                        <h3>Jhanda Chowk</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- 02: Station Road -->
+                <article class="location-card" data-location="Station Road, Jhumri Telaiya, Koderma, Jharkhand">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Station Road photo</div>
+                        <img src="images/station-road.jpg" alt="Durga Puja pandal at Station Road, Jhumri Telaiya">
+                        <span class="photo-number">02</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">JHUMRI TELAIYA, KODERMA</span>
+                        <h3>Station Road</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- 03: Belatand -->
+                <article class="location-card" data-location="Belatand, Jhumri Telaiya, Koderma, Jharkhand">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Belatand photo</div>
+                        <img src="images/belatand.jpg" alt="Durga Puja pandal in Belatand, Jhumri Telaiya">
+                        <span class="photo-number">03</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">JHUMRI TELAIYA, KODERMA</span>
+                        <h3>Belatand</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- 04: Bada Bazar -->
+                <article class="location-card" data-location="Bada Bazar, Jhumri Telaiya, Koderma, Jharkhand">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Bada Bazar photo</div>
+                        <img src="images/bada-bazar.jpg" alt="Durga Puja pandal at Bada Bazar, Jhumri Telaiya">
+                        <span class="photo-number">04</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">JHUMRI TELAIYA, KODERMA</span>
+                        <h3>Bada Bazar</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- 05: Maduatand -->
+                <article class="location-card" data-location="Maduatand, Jhumri Telaiya, Koderma, Jharkhand">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Maduatand photo</div>
+                        <img src="images/maduatand.jpg" alt="Durga Puja pandal in Maduatand, Jhumri Telaiya">
+                        <span class="photo-number">05</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">JHUMRI TELAIYA, KODERMA</span>
+                        <h3>Maduatand</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- 06: Markacho -->
+                <article class="location-card" data-location="Markacho Durga Mandir, Markacho, Koderma, Jharkhand">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Markacho photo</div>
+                        <img src="images/markacho.jpg" alt="Durga Puja pandal in Markacho, Koderma">
+                        <span class="photo-number">06</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">MARKACHO, KODERMA</span>
+                        <h3>Markacho</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+                <!-- 07: Domchanch Bazar -->
+                <article class="location-card" data-location="Domchanch Bazar, Koderma, Jharkhand">
+                    <div class="location-photo">
+                        <div class="photo-placeholder">Add Domchanch photo</div>
+                        <img src="images/domchanch.jpg" alt="Durga Puja pandal at Domchanch Bazar, Koderma">
+                        <span class="photo-number">07</span>
+                    </div>
+                    <div class="location-info">
+                        <span class="location-tag">DOMCHANCH, KODERMA</span>
+                        <h3>Domchanch Bazar</h3>
+                        <a class="map-link" target="_blank" rel="noopener">View on Google Maps <span>↗</span></a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <section class="koderma-note" id="bihar">
+            <span>✿</span>
+            <p>More festive destinations and celebration details will be added soon.</p>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <a href="index.html" class="footer-logo">✿ Durga Utsav</a>
+        <p>Pandal · Mela · Celebration</p>
+        <p>Celebrating the spirit of Durga Puja.</p>
+        <small>© 2026 Durga Utsav. All rights reserved.</small>
+    </footer>
+      <!-- SCROLL TO TOP ARROW BUTTON -->
+    <button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑ </button>
+
+    <script src="koderma.js"></script>
+    <script src="music.js"></script>
+    <!-- SCROLL TO TOP ARROW BUTTON -->
+    <!--<button class="back-to-top-btn" id="backToTop" aria-label="Scroll back to top" title="Back to Top">↑</button>
+
+</body>
+</html>
